@@ -117,7 +117,13 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/*===== NAV =====*/
+#submit_col{
+  color: #7300ff;
+  background-color: #ff6f08;
+  font-size: 1.5rem;
+  font-style:italic;
+  font-weight: 3rem;
+}
 .nav {
   height: var(--header-height);
   display: flex;
