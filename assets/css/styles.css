@@ -1,42 +1,37 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
-  --bgcolor:rgb(76, 179, 95);
+  --bgcolor: rgb(76, 179, 95);
 }
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2.6rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
 /*===== BASE =====*/
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -49,10 +44,12 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background:var(--bgcolor);
+  background: var(--bgcolor);
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin: 0;
 }
 
@@ -106,7 +103,6 @@ img {
   margin-right: var(--mb-2);
 }
 
-
 .l-header {
   width: 100%;
   position: fixed;
@@ -116,12 +112,18 @@ img {
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
-
-#submit_col{
+.row_contact {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+}
+#submit {
   color: #7300ff;
   background-color: #ff6f08;
-  font-size: 1.5rem;
-  font-style:italic;
+  font-size: 1.7rem;
+  font-style: italic;
   font-weight: 3rem;
 }
 .nav {
@@ -145,13 +147,16 @@ img {
 }
 .nav__item {
   margin-bottom: var(--mb-4);
+  text-decoration: none;
 }
 .nav__link {
   position: relative;
   color: rgb(153, 28, 199);
+  text-decoration: none;
 }
 .nav__link:hover {
   position: relative;
+  text-decoration: none;
 }
 .nav__link:hover::after {
   position: absolute;
@@ -161,10 +166,12 @@ img {
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
-  color:white;
+  color: white;
+  text-decoration: none;
 }
 .nav__logo {
   color: var(--second-color);
+  text-decoration: none;
 }
 .nav__toggle {
   color: var(--second-color);
@@ -233,7 +240,7 @@ img {
 /*BUTTONS*/
 .button {
   display: inline-block;
-  background-color:rgb(153, 28, 199);
+  background-color: rgb(153, 28, 199);
   color: #00f2ff;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
@@ -245,8 +252,8 @@ img {
 }
 
 /* ===== ABOUT =====*/
-#about{
-  background-color:aqua;
+#about {
+  background-color: aqua;
 }
 .about__container {
   row-gap: 2rem;
@@ -263,12 +270,12 @@ img {
   width: 200px;
   border-radius: 0.5rem;
 }
-.section-title{
-  color:rgb(18, 74, 158);
-  padding-bottom : 20px;
+.section-title {
+  color: rgb(18, 74, 158);
+  padding-bottom: 20px;
 }
 /* ===== SKILLS =====*/
-#skills{
+#skills {
   background-color: rgb(118, 212, 212);
 }
 .skills__container {
@@ -319,6 +326,12 @@ img {
 .skills__js {
   width: 65%;
 }
+.skills__php {
+  width: 60%;
+}
+.skills__mysql {
+  width: 60%;
+}
 .skills__ux {
   width: 85%;
 }
@@ -326,22 +339,19 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== WORK =====*/
-
-/* ===== CONTACT =====*/
-.contact-container{
-  height:100vh;
+.contact-container {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.contact-left{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:20px;
-}
-.contact-left-title hr{
+/* .contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+  } */
+.contact-left-title hr {
   border: none;
   width: 80px;
   height: 5px;
@@ -349,14 +359,19 @@ img {
   border-radius: 10px;
   margin-bottom: 2px;
 }
-.contact-input{
+#sender_name,
+#email,
+#message {
+  background-color: #ffcda1;
+}
+/* .contact-input{
   border-radius: none;
   outline:none;
   padding-left:25px;
   font-weight:500;
   color:#666;
   border-radius: 50px;  
-}
+} 
 .contact-left textarea{
   height: 140px;
   padding-top: 15px;
@@ -379,12 +394,12 @@ img {
   border-radius: 50px;
   background:linear-gradient(270deg,#ff994f,#fa6d86);
 }
-@media (max-width:800px) {
+/* @media (max-width:800px) {
   .contact-input{
       width:80vw;
   }
-}
-/* ===== FOOTER =====*/
+} */
+
 .footer {
   background-color: var(--second-color);
   color: #fff;
@@ -409,7 +424,6 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
@@ -481,10 +495,12 @@ img {
   .nav__list {
     display: flex;
     padding-top: 0;
+    text-decoration: none;
   }
   .nav__item {
     margin-left: var(--mb-6);
     margin-bottom: 0;
+    text-decoration: none;
   }
   .nav__toggle {
     display: none;
