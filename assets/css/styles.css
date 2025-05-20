@@ -364,6 +364,9 @@ img {
 #message {
   background-color: #ffcda1;
 }
+#btn_mail{
+  text-decoration:none;
+}
 /* .contact-input{
   border-radius: none;
   outline:none;
