@@ -1,4 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.skills__data {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.skills__icon {
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+.skills__name {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Power BI Icon Image Style */
+.skills__icon-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover; /* ensures image stays neat */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .skills__icon-img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__icon-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 
 :root {
   --header-height: 3rem;
