@@ -24,6 +24,7 @@
   object-fit: cover; /* ensures image stays neat */
   vertical-align: middle;
   transition: transform 0.3s ease;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
